@@ -26,7 +26,7 @@ app.post('/api/calculate', (req, res) => {
     // Perform your 5/3/1 Calculator logic
     const calculatedData = calculate531(lifts);
 
-    res.json({ message: 'Calculation completed', lifts });
+    res.json({ message: 'Calculation completed', calculatedData }); // changed from res.json({ message: 'Calculation completed', lifts });
   } catch (error) {
     console.error('Error in /api/calculate:', error);
     res.status(500).json({ error: 'Internal Server Error' });
